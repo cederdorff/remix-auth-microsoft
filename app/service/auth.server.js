@@ -1,8 +1,8 @@
 import { Authenticator } from "remix-auth";
-import { GoogleStrategy } from "remix-auth-google";
+import { MicrosoftStrategy } from "remix-auth-microsoft";
 import { sessionStorage } from "./session.server";
 
-const googleStrategy = new GoogleStrategy(
+const microsoftStrategy = new MicrosoftStrategy(
   {
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
@@ -18,4 +18,4 @@ const googleStrategy = new GoogleStrategy(
 );
 
 export const authenticator = new Authenticator(sessionStorage);
-authenticator.use(googleStrategy);
+authenticator.use(microsoftStrategy);

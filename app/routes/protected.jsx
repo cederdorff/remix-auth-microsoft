@@ -16,9 +16,8 @@ export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
       <h1>Welcome {user.displayName}</h1>
-      <img src={user._json.picture} alt={user.displayName} />
+      <img src={user._json.photos[0]} alt={user.displayName} />
       <h2>{user._json.name}</h2>
-      <p>{user._json.bio}</p>
       <p>
         Mail: <a href={`mailto:${user._json.email}`}>{user._json.email}</a>
       </p>

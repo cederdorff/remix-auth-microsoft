@@ -6,7 +6,7 @@ export async function loader() {
 }
 
 export async function action({ request }) {
-  return authenticator.authenticate("google", request, {
+  return authenticator.authenticate("microsoft", request, {
     successRedirect: "/protected"
   });
 }
